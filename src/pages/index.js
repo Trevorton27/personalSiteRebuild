@@ -1,29 +1,41 @@
-import React from "react"
-import Footer from '../components/Footer.js';
+import React from "react";
+import PrimaryLayout from '../layouts/PrimaryLayout.js';
 import Post from '../components/Post.js';
-import SEO from "../components/seo";
-import Header from '../components/Header.js';
-
-const IndexPage = () => (
-  <div>
-    <SEO title="Home" />
-    <Header />
-    <div className="container" >
-      <div className="row justify-content-md-center">
-        <div className="col-xs-6">
-          <h1 >Hi, humans...</h1>
-          <Post title="Cat's first post." excerpt="Don't have much to say because...well, I'm a cat"/>
-          <Post title="Cat's first post." excerpt="Don't have much to say because...well, I'm a cat"/>
-          <Post title="Cat's first post." excerpt="Don't have much to say because...well, I'm a cat"/>
-          <Post title="Cat's first post." excerpt="Don't have much to say because...well, I'm a cat"/>
-        </div>
-      </div>
-
-    </div>
-    <Footer />
-  </div>
+import {graphql} from 'gatsby';
 
 
-)
+const IndexPage = ({data}) => {
 
-export default IndexPage
+  return (
+  <PrimaryLayout column="col-6">
+    {data.allMarkdownRemark.nodes.map(node => (
+          <Post 
+          image={node.frontmatter.image}
+          title={node.frontmatter.title} 
+          excerpt={node.excerpt}
+          readMoreLink={node.fields.slug}
+          />
+    ))}
+  </PrimaryLayout>
+  )
+}
+
+export const query = graphql`{
+  allMarkdownRemark {
+    nodes {
+      frontmatter {
+        title
+        date
+        image
+        
+      }
+      excerpt
+      html
+      fields {
+        slug
+      }
+      
+    }
+  }
+}`
+export default IndexPage;
