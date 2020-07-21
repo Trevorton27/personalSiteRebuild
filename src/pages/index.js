@@ -1,41 +1,37 @@
 import React from "react";
 import PrimaryLayout from '../layouts/PrimaryLayout.js';
 import Post from '../components/Post.js';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 
 
-const IndexPage = ({data}) => {
-
+const IndexPage = ({ data }) => {
+  console.log('incoming data is ', data);
   return (
-  <PrimaryLayout column="col-6">
-    {data.allMarkdownRemark.nodes.map(node => (
-          <Post 
-          image={node.frontmatter.image}
-          title={node.frontmatter.title} 
+    <PrimaryLayout column="col-xs-6">
+      {data.allWordpressPost.nodes.map(node => (
+        <Post
+          image={node.featured_media.source_url}
+          title={node.title}
           excerpt={node.excerpt}
-          readMoreLink={node.fields.slug}
-          />
-    ))}
-  </PrimaryLayout>
+          readMoreLink={node.slug}
+        />
+      ))}
+    </PrimaryLayout>
   )
 }
 
-export const query = graphql`{
-  allMarkdownRemark {
-    nodes {
-      frontmatter {
-        title
-        date
-        image
-        
-      }
-      excerpt
-      html
-      fields {
+export const query = graphql`
+  {
+    allWordpressPost {
+      nodes {
         slug
+        title
+        excerpt
+        featured_media {
+          source_url
+        }
       }
-      
     }
   }
-}`
+  `
 export default IndexPage;

@@ -35,6 +35,14 @@ module.exports = {
         plugins: [],
       },
     },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        baseUrl: 'https://practice.codingsrc.com',
+        protocol: 'https',
+        hostingWPCOM: false,
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
