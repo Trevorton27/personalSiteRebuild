@@ -1,0 +1,15 @@
+.container {
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: auto;
+  max-width: 80%;
+}
+
+#postDateInfo {
+  font-style: italic;
+}
+
+#postWrapper {
+  margin-top: 3em;
+}

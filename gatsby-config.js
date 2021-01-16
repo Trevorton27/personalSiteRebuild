@@ -36,12 +36,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-wordpress',
+      resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: 'https://practice.codingsrc.com',
-        protocol: 'https',
+        baseUrl: "https://trevormearnssource.cyou/",
+        protocol: "https",
         hostingWPCOM: false,
-      }
+        minimizeDeprecationNotice: true,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
