@@ -1,3 +1,29 @@
+#brand:hover {
+  color: goldenrod !important;
+}
+
+#brand {
+  margin-left: 3em;
+  font-size: 30px;
+}
+
+.navbar {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 5em;
+}
+
+.navbar-nav .nav-link {
+  margin-left: 2em;
+  font-size: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: goldenrod !important;
+}
+
+.navbar-nav .nav-link[aria-current="page"] {
+  color: goldenrod !important;
+}
 .container {
   background-color: #fff;
   padding-left: 1em;

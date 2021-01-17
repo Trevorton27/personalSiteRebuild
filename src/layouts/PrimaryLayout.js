@@ -6,10 +6,10 @@ import SEO from "../components/seo"
 const PrimaryLayout = props => (
   <div>
     <SEO title="Home" />
-    <Header />
+
     <div className="container">
       <div>
-        <div className={props.column}>{props.children}</div>
+        <div>{props.children}</div>
       </div>
     </div>
     <Footer />
