@@ -2,6 +2,7 @@ import React from "react"
 import PrimaryLayout from "../layouts/PrimaryLayout.js"
 import Banner from "../components/Banner"
 import Header from "../components/Header"
+import About from "../components/About"
 
 import "../styles/app.css"
 const IndexPage = () => {
@@ -10,7 +11,7 @@ const IndexPage = () => {
       <Header />
       <Banner />
       <PrimaryLayout>
-        <div className="cardWrapper">Yo. </div>
+        <About />
       </PrimaryLayout>
     </div>
   )
