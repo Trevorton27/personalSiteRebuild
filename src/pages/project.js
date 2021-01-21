@@ -1,9 +1,9 @@
 import React from "react"
 import PrimaryLayout from "../layouts/PrimaryLayout.js"
 import Header from "../components/Header"
-import { Link } from "react-bootstrap"
+import { Link } from "gatsby"
 
-const IndexPage = () => {
+const project = () => {
   return (
     <div>
       <Header />
@@ -163,4 +163,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default project
