@@ -10,6 +10,7 @@ const IndexPage = ({ data }) => {
     <div>
       <Header />
       <PrimaryLayout column="col-xs-6">
+        <h1 style={{ padding: ".8em" }}>Hiya. Welcome to my blog.</h1>
         {data.allWordpressPost.nodes.map(node => (
           <div>
             <Post

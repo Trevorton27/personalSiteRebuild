@@ -619,4 +619,8 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+
+  #brand {
+    margin-left: 0em;
+  }
 }

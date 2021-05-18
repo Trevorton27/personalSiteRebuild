@@ -6,10 +6,8 @@ const PrimaryLayout = props => (
   <div>
     <SEO title="Home" />
 
-    <div className="container">
-      <div>
-        <div>{props.children}</div>
-      </div>
+    <div className="container-fluid">
+      <div>{props.children}</div>
     </div>
     <Footer />
   </div>
