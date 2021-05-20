@@ -8,8 +8,6 @@ const logoStyle = {
   color: "#fff",
 }
 
-const mediaMatch = window.matchMedia("(max-width: 400)")
-
 export default props => (
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
     <Link class="navbar-brand nav-item nav-link navLink" to="/" id="brand">

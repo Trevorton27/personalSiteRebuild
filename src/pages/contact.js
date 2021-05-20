@@ -17,7 +17,13 @@ const IndexPage = () => (
             alt="rocket_contact"
           />
         </div>
-        <form method="post" style={{ marginBottom: "3em" }}>
+        <form
+          name="contactForm"
+          method="POST"
+          data-netlify="true"
+          style={{ marginBottom: "3em" }}
+        >
+          <input type="hidden" name="form-name" value="contactForm" />
           <h2
             style={{
               textAlign: "center",
@@ -32,7 +38,7 @@ const IndexPage = () => (
               <div class="form-group">
                 <input
                   type="text"
-                  name="txtName"
+                  name="name"
                   class="form-control"
                   placeholder="Your Name *"
                   value=""
@@ -41,7 +47,7 @@ const IndexPage = () => (
               <div class="form-group">
                 <input
                   type="text"
-                  name="txtEmail"
+                  name="email"
                   class="form-control"
                   placeholder="Your Email *"
                   value=""
@@ -51,7 +57,7 @@ const IndexPage = () => (
             <div class="col-md-6">
               <div class="form-group">
                 <textarea
-                  name="txtMsg"
+                  name="message"
                   class="form-control"
                   placeholder="Your Message *"
                   // style={width: '100%'; height: '150px';}
