@@ -1,7 +1,43 @@
-import React from "react"
+import React, { useState } from "react"
 import PrimaryLayout from "../layouts/PrimaryLayout.js"
 import Header from "../components/Header"
 import { Form, Button } from "react-bootstrap"
+
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  message: "",
+})
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
+const handleChange = e => {
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value,
+  })
+}
+
+const handleSubmit = e => {
+  e.preventDefault()
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({ "form-name": "contact", ...form }),
+  })
+    .then(() => alert("Success!"))
+    .catch(error => alert(error))
+  setForm({
+    name: "",
+    email: "",
+    message: "",
+  })
+}
 
 const IndexPage = () => (
   <div>
@@ -22,6 +58,7 @@ const IndexPage = () => (
           method="POST"
           data-netlify="true"
           style={{ marginBottom: "3em" }}
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contactForm" />
           <h2
@@ -41,7 +78,8 @@ const IndexPage = () => (
                   name="name"
                   class="form-control"
                   placeholder="Your Name *"
-                  value=""
+                  onChange={handleChange}
+                  value={form.name}
                 />
               </div>
               <div class="form-group">
@@ -50,7 +88,8 @@ const IndexPage = () => (
                   name="email"
                   class="form-control"
                   placeholder="Your Email *"
-                  value=""
+                  onChange={handleChange}
+                  value={form.email}
                 />
               </div>
             </div>
@@ -60,7 +99,8 @@ const IndexPage = () => (
                   name="message"
                   class="form-control"
                   placeholder="Your Message *"
-                  // style={width: '100%'; height: '150px';}
+                  onChange={handleChange}
+                  value={form.message}
                 ></textarea>
               </div>
             </div>
