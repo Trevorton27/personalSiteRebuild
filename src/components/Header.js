@@ -29,7 +29,11 @@ export default props => (
         <Link className="nav-item nav-link navLink" as={Link} to="/blog">
           Blog
         </Link>
-        <Link className="nav-item nav-link navLink" as={Link} to="/Contact">
+        <Link
+          className="nav-item nav-link navLink"
+          as={Link}
+          to="../pages/Contact"
+        >
           Contact
         </Link>
         <Link className="nav-item nav-link navLink" as={Link} to="/project">
