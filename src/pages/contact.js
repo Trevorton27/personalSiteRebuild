@@ -68,7 +68,7 @@ class IndexPage extends React.Component {
             method="POST"
             data-netlify="true"
             style={{ marginBottom: "3em" }}
-            onSubmit={handleSubmit}
+            onSubmit={this.handleSubmit}
           >
             <input type="hidden" name="form-name" value="contactForm" />
             <h2
@@ -88,7 +88,7 @@ class IndexPage extends React.Component {
                     name="name"
                     class="form-control"
                     placeholder="Your Name *"
-                    onChange={handleChange}
+                    onChange={this.handleChange}
                     value={this.state.name}
                   />
                 </div>
@@ -98,7 +98,7 @@ class IndexPage extends React.Component {
                     name="email"
                     class="form-control"
                     placeholder="Your Email *"
-                    onChange={handleChange}
+                    onChange={this.handleChange}
                     value={this.state.email}
                   />
                 </div>
@@ -109,7 +109,7 @@ class IndexPage extends React.Component {
                     name="message"
                     class="form-control"
                     placeholder="Your Message *"
-                    onChange={handleChange}
+                    onChange={this.handleChange}
                     value={this.state.message}
                   ></textarea>
                 </div>
