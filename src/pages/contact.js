@@ -3,49 +3,6 @@ import PrimaryLayout from "../layouts/PrimaryLayout.js"
 import Header from "../components/Header"
 
 class IndexPage extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     name: "",
-  //     email: "",
-  //     message: "",
-  //   }
-
-  //   this.encode = this.encode.bind(this)
-  //   this.handleChange = this.handleChange.bind(this)
-  //   this.handleSubmit = this.handleSubmit.bind(this)
-  // }
-
-  // handleChange(e) {
-  //   const { name, value } = e.target
-  //   this.setState({
-  //     [name]: value,
-  //   })
-  // }
-
-  // handleSubmit(e) {
-  //   e.preventDefault()
-
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({ "form-name": "contactForm", ...this.state }),
-  //   })
-  //     .then(() => alert("Success!"))
-  //     .catch(error => alert(error))
-  //   this.setState({
-  //     name: "",
-  //     email: "",
-  //     message: "",
-  //   })
-  // }
-
-  // encode(data) {
-  //   return Object.keys(data)
-  //     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-  //     .join("&")
-  // }
-
   render() {
     return (
       <div>
@@ -71,7 +28,6 @@ class IndexPage extends React.Component {
               data-netlify="true"
               action="/thankYou"
               style={{ marginBottom: "3em" }}
-              //onSubmit={this.handleSubmit}
             >
               <input type="hidden" name="form-name" value="contactForm" />
               <h2
@@ -83,55 +39,48 @@ class IndexPage extends React.Component {
               >
                 Contact Trevor
               </h2>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Your Name *"
-                      // onChange={this.handleChange}
-                      // value={this.state.name}
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="email"
-                      class="form-control"
-                      placeholder="Your Email *"
-                      // onChange={this.handleChange}
-                      // value={this.state.email}
-                    />
-                  </div>
+              <div class="row justify-content-center">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Your Name *"
+                    required
+                  />
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea
-                      name="message"
-                      class="form-control"
-                      placeholder="Your Message *"
-                      // onChange={this.handleChange}
-                      // value={this.state.message}
-                    ></textarea>
-                  </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="email"
+                    class="form-control"
+                    placeholder="Your Email *"
+                    required
+                  />
                 </div>
-              </div>
-              <div class="form-group" style={{ textAlign: "center" }}>
-                <input
-                  style={{
-                    marginTop: "1.5em",
-                    marginBottom: "2.5em",
-                    backgroundColor: "#343a40",
-                    color: "#fff",
-                    padding: ".4em 1em .4em 1em",
-                  }}
-                  type="submit"
-                  name="btnSubmit"
-                  class="btnContact"
-                  value="Send It"
-                />
+                <div class="form-group">
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    placeholder="Your Message *"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group" style={{ textAlign: "center" }}>
+                  <input
+                    style={{
+                      marginTop: "1.5em",
+                      marginBottom: "2.5em",
+                      backgroundColor: "#343a40",
+                      color: "#fff",
+                      padding: ".4em 1em .4em 1em",
+                    }}
+                    type="submit"
+                    name="btnSubmit"
+                    class="btnContact"
+                    value="Send It"
+                  />
+                </div>
               </div>
             </form>
           </div>

@@ -24,7 +24,7 @@ export default props => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
+        <Nav>
           <Nav.Link as={Link} to="/blog">
             Blog
           </Nav.Link>
@@ -34,7 +34,9 @@ export default props => (
           <Nav.Link as={Link} to="/project">
             Projects
           </Nav.Link>
-          <Nav.Link href="https://github.com/Trevorton27">Github</Nav.Link>
+          <Nav.Link href="https://github.com/Trevorton27" className=" ml-auto">
+            Github
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
