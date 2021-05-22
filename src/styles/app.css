@@ -27,18 +27,33 @@
   color: goldenrod !important;
 }
 
+.navbar-collapse {
+  background-color: #212529;
+  color: goldenrod !important;
+}
+
+.navbar-collapse a {
+  color: goldenrod !important;
+}
+
 .jumbotron {
   background-image: url(../images/Snag_14cd2137.png);
-  background-size: 100%;
+
   min-height: 33em;
-  opacity: 95%;
   padding-bottom: 0px;
   background-color: #fff;
   background-repeat: no-repeat;
 }
 
-#bannerText {
-  margin-top: 9em;
+.title {
+  padding-top: 4em;
+  color: #fff;
+  padding-left: 2em;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+/* #bannerTitleText {
   background-color: transparent;
   color: #eeeeee;
   margin-left: 5%;
@@ -49,7 +64,7 @@
   font-weight: 400;
 
   text-shadow: 2px 2px 2px rgba(206, 89, 55, 0);
-}
+} */
 .container-fluid {
   background-color: #fff;
   padding-left: 1em;
@@ -143,7 +158,7 @@ input {
 
 @media only screen and (max-width: 480px) {
   #brand {
-    margin-left: 0em;
+    margin-left: 1em !important;
     font-size: 20px;
   }
 
