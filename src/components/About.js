@@ -5,14 +5,9 @@ import photo from "../images/personalPic.png"
 const About = ({ data }) => {
   console.log(photo)
   return (
-    <PrimaryLayout>
-      <h2 style={{ fontSize: "40px", marginTop: "2em" }}>About Me</h2>
-      <p>Born</p>
-      <div className="row ">
-        <div
-          className="col-md align-items-center"
-          style={{ textAlign: "center" }}
-        >
+    <div>
+      <div className="row">
+        <div className="col-md">
           <img
             src={photo}
             alt=""
@@ -30,6 +25,41 @@ const About = ({ data }) => {
           >
             Trevor Mearns mid ride Kamiyama, Japan 2021
           </p>
+        </div>
+        <div className="col-md">
+          <h2 style={{ fontSize: "40px", marginTop: ".5em" }}>About Me</h2>
+          <h3>(the short version)</h3>
+          <br />
+          <h3>Bio:</h3>
+          <ul>
+            <li>Born in Seattle WA, child of the 80's</li>
+            <li>Love my children, nature and study</li>
+            <li>I know Kung Fu.</li>
+          </ul>
+          <h3>Languages:</h3>
+          <ul>
+            <li>English</li>
+            <li>Japanese</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+          </ul>
+          <h3>Interests & Competencies</h3>
+          <ul>
+            <li>Full stack software engineering</li>
+            <li>Teaching</li>
+            <li>Learning</li>
+            <li>Martial Arts</li>
+            <li>Most anything beneficial to oneself and others/challenging.</li>
+          </ul>
+        </div>
+      </div>
+      <div className="row ">
+        <div
+          className="col-md align-items-center"
+          style={{ textAlign: "center" }}
+        >
+          <h2 style={{ fontSize: "40px", marginTop: "2em" }}>About Me</h2>
+          <h3>(the longer version)</h3>
         </div>
         <div className="col-md">
           <p>
@@ -79,7 +109,7 @@ const About = ({ data }) => {
           .{" "}
         </p>
       </div>
-    </PrimaryLayout>
+    </div>
   )
 }
 

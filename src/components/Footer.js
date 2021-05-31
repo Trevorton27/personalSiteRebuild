@@ -2,13 +2,16 @@ import React from "react"
 import footerStyle from "./footer.module.css"
 
 const Footer = () => (
-  <footer className={footerStyle.footer}>
-    Trevor Mearns © {new Date().getFullYear()}, Built with
+  <div className={footerStyle.footer}>
+    Trevor Mearns © {new Date().getFullYear()}, Built using
     {` `}
-    <a style={{ color: "#fff" }} href="https://www.gatsbyjs.org">
+    <a
+      style={{ color: "#fff", textDecoration: "none", minHeight: "30px" }}
+      href="https://www.gatsbyjs.org"
+    >
       Gatsby
     </a>
-  </footer>
+  </div>
 )
 
 export default Footer

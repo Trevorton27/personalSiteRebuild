@@ -12,11 +12,17 @@
 .navbar {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 5em;
+  position: fixed;
+  width: 100%;
+  padding-right: 3em;
 }
 
 .navbar-nav .nav-link {
-  margin-left: 2em;
   font-size: 20px;
+  background-color: #343a40;
+  color: #76797e !important;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .navbar-nav .nav-link:hover {
@@ -28,25 +34,26 @@
 }
 
 .navbar-collapse {
-  background-color: #212529;
+  background-color: #343a40;
   color: goldenrod !important;
 }
 
-.navbar-collapse a {
+/* .navbar-collapse a {
   margin-right: 50%;
-}
+} */
 
 .navbar-collapse a {
   color: goldenrod !important;
 }
 
 .jumbotron {
-  background-image: url(../images/Snag_14cd2137.png);
-  object-fit: cover;
+  /* background-image: url(../images/Snag_14cd2137.png); */
+  /* object-fit: cover; */
   min-height: 33em;
   padding-bottom: 0px;
   background-color: #fff;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .title {
@@ -59,10 +66,12 @@
 
 .container-fluid {
   background-color: #fff;
+
   padding-left: 1em;
   padding-right: 1em;
-  height: auto;
+  height: 100%;
   max-width: 95%;
+  position: relative;
 }
 
 .aboutWrapper {

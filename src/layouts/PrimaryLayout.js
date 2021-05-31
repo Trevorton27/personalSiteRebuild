@@ -3,7 +3,7 @@ import Footer from "../components/Footer.js"
 import SEO from "../components/seo"
 
 const PrimaryLayout = props => (
-  <div>
+  <div style={{ marginTop: "110px" }}>
     <SEO title="Home" />
 
     <div className="container-fluid">
